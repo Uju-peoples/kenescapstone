@@ -2,9 +2,20 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      Homepage
-    </div>
+    <>
+       <header>
+        {/* Your header content goes here */}
+      </header>
+      <nav>
+        {/* Your navigation content goes here */}
+      </nav>
+      <main>
+        {/* Your main content goes here */}
+      </main>
+      <footer>
+        {/* Your footer content goes here */}
+      </footer>
+    </>
   );
 }
 
