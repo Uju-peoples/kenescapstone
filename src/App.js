@@ -4,7 +4,7 @@ function App() {
   return (
     <>
        <Header>
-       <img src="path/to/your-logo.png" alt="Little Lemon Logo" />
+       <img src="C:\Users\kemma\Desktop\kenescapstone\kenescapstone\public\icons_assets\Little Lemon Logo.svg" alt="Little Lemon Logo" />
       </Header>
       <Nav>
       <ul>

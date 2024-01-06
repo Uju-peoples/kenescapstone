@@ -3,29 +3,32 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <img class="logo" src="path/to/your-logo.png" alt="Restaurant Logo"/>
+      <img class="logo" src="C:\Users\kemma\Desktop\kenescapstone\kenescapstone\public\icons_assets\Logo.svg" alt="Restaurant Logo"/>
   
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Reservation</a></li>
-      <li><a href="#">Order Online</a></li>
-      <li><a href="#">Login</a></li>
+       <li><a href="/home">Home</a></li>
+       <li><a href="/about">About</a></li>
+       <li><a href="/menu">Menu</a></li>
+       <li><a href="/reservation">Reservation</a></li>
+       <li><a href="/order-online">Order Online</a></li>
+       <li><a href="/login">Login</a></li>
     </ul>
   </nav>
   
-  <div class="contact-info">
-    <p>Address: Your Restaurant Address</p>
-    <p>Phone: Your Phone Number</p>
-    <p>Email: your@email.com</p>
+  <div className="contact">
+      <h5>CONTACT</h5>
+         <ul>
+            <li>13 Ozumba Mbadiwe street - Lagos</li>
+            <li>Tel: 0800 743 9256</li>
+            <li>Email: info@littlelemon.com</li>
+         </ul>
   </div>
   
-  <div class="social-media">
-    <a href="#" target="_blank">Facebook</a>
-    <a href="#" target="_blank">Twitter</a>
-    <a href="#" target="_blank">Instagram</a>
+  <div className="social-media">
+    <a href="https://www.facebook.com/Little Lemon" target="_blank">Facebook</a>
+    <a href="https://twitter.com/Little Lemon" target="_blank">Twitter</a>
+    <a href="https://www.instagram.com/Little Lemon" target="_blank">Instagram</a>
   </div>
     </footer>
   );
