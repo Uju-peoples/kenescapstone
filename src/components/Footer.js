@@ -1,12 +1,11 @@
 import React from 'react';
-import RestaurantLogo from '../logo.svg';
 import '../Styles.css';
 
 const Footer = () => {
   return (
     <footer>
       {/* Use the imported component */}
-      <img src={RestaurantLogo} alt="Logo" />
+      <img src="C:\Users\kemma\Desktop\kenescapstone\kenescapstone\src\components\styles\restaurant.jpg" alt="Logo" />
 
       <nav>
         <ul>
