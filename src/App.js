@@ -1,27 +1,20 @@
 import React from 'react';
-import Header from './components/Header.js';
-import Nav from './components/Nav.js';
-import Main from './components/Main.js';
-import Footer from './components/Footer.js';
-import Specials from './components/Specials.js';
-import SpecialsCard from './components/SpecialsCard.js';
-import Navlink from './components/Navlink.js';
 import './App.css';
-import Styles from './Styles.css';
+import Nav from './components/Nav';
+import Main from './components/Main';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <>
-      <Styles />
-      <Header />
       <Nav />
-      <Navlink />
       <Main />
-      <Specials />
-      <SpecialsCard />
+      <Menu />
       <Footer />
     </>
   );
-}
+};
 
 export default App;

@@ -1,25 +1,60 @@
-import React from 'react';
-import '../Styles.css';
+import React, { useReducer } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import Header from './Header';
+import Booking from './Booking';
 
-    const Main = () => {
-        return (
-          <div className="hero-section-background">
-              <div className="hero-section-container">
-                  <div className="section-left">
-                      <h1>Little Lemon</h1>
-                      <h2>Chicago</h2>
-                      <p>We are a family owned Mediterranean restaurant,
-                        focused on traditional recipes served with a modern twist.
-                    </p>
-                  </div>
-                  <div className="section-right">
-                      <div className="image-box">
-                          <img src="C:\Users\kemma\Desktop\kenescapstone\kenescapstone\public\icons_assets\restaurant chef B.jpg" alt="Serving delicious dish" />
-                      </div>
-                  </div>
-              </div>
-          </div>
-        );
-      };
+const Main = () => {
+
+    const seedRandom = function(seed) {
+        var m = 2 ** 35 - 31;
+        var a = 185852;
+        var s = seed % m;
+        return function() {
+            return (s = s * a % m) / m;
+        };
+    };
+
+    const fetchAPI = function(date) {
+        let result = [];
+        let random = seedRandom(date.getDate());
+        for (let i = 17; i <= 23; i++) {
+            if (random() < 0.5) {
+                result.push(i + ':00');
+            }
+            if (random() > 0.5) {
+                result.push(i + ':30');
+            }
+        }
+        return result;
+    };
+
+    const submitAPI = function(formData) {
+        return true;
+    };
+
+    const initialState = { availableTimes: fetchAPI(new Date()) };
+    const { state, dispatch } = useReducer(updateTimes, initialState);
+
+    function updateTimes(state, date) {
+        return { availableTimes: fetchAPI(new Date()) };
+    }
+
+    const navigate = useNavigate();
+
+    function submitForm(formData) {
+        if (submitAPI(formData)) {
+            navigate("/confirmed");
+        }
+    }
+
+    return (
+        <main>
+            <Routes>
+                <Route path='/' element={<Header />} />
+                <Route path='/booking' element={<Booking availableTimes={state} dispatch={dispatch} submitForm={submitForm} />} />
+            </Routes>
+        </main>
+    );
+};
 
 export default Main;

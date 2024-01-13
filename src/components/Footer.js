@@ -1,39 +1,47 @@
 import React from 'react';
-import '../Styles.css';
+import logo from './styles/Logo.svg';
 
 const Footer = () => {
-  return (
-    <footer>
-      {/* Use the imported component */}
-      <img src="C:\Users\kemma\Desktop\kenescapstone\kenescapstone\src\components\styles\restaurant.jpg" alt="Logo" />
-
-      <nav>
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/reservation">Reservation</a></li>
-          <li><a href="/order-online">Order Online</a></li>
-          <li><a href="/login">Login</a></li>
-        </ul>
-      </nav>
-
-      <div className="contact">
-        <h5>CONTACT</h5>
-        <ul>
-          <li>13 Ozumba Mbadiwe street - Lagos</li>
-          <li>Tel: 0800 743 9256</li>
-          <li>Email: info@littlelemon.com</li>
-        </ul>
-      </div>
-
-      <div className="social-media">
-        <a href="https://www.facebook.com/LittleLemon" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://twitter.com/LittleLemon" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="https://www.instagram.com/LittleLemon" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </div>
-    </footer>
-  );
+    return (
+        <footer>
+            <section>
+                <div className='company-info'>
+                    <img src={logo} alt=''/>
+                    <p>we are a family owned
+                    Mediterranean restaurant,
+                    focused on traditional recipes
+                    served with modern twist.</p>
+                </div>
+                <div>
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/'>About</a></li>
+                        <li><a href='/'>Menu</a></li>
+                        <li><a href='/'>Reservations</a></li>
+                        <li><a href='/'>Order Online</a></li>
+                        <li><a href='/'>Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Address: <br/> 14 Cincinati, USA</li>
+                        <li>Phone: <br/> ++ 0190 670 878</li>
+                        <li>Email: <br/> little@lemon.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Social Media Links</h3>
+                    <ul>
+                        <li><a href='/'>Facebook</a></li>
+                        <li><a href='/'>Instagram</a></li>
+                        <li><a href='/'>Twitter</a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    );
 };
 
 export default Footer;
