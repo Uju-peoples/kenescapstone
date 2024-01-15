@@ -13,7 +13,7 @@ const Footer = () => {
                     served with modern twist.</p>
                 </div>
                 <div>
-                    <h3>Important Links</h3>
+                    <h3>Doormat Navigation</h3>
                     <ul>
                         <li><a href='/'>Home</a></li>
                         <li><a href='/'>About</a></li>
