@@ -42,6 +42,12 @@ const BookingForm = (props) => {
                         </div>
 
                         <div className="form-group">
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" id="email" {...register('email', { required: true, pattern: /^\S+@\S+$/i })} />
+                            {errors.email && <p>Valid email is required</p>}
+                        </div>
+
+                        <div className="form-group">
                             <label htmlFor="book-date">Choose Date:</label>
                             <input id='book-date' value={date} onChange={(e) => handleChange(e.target.value)} type='date' required />
                         </div>
